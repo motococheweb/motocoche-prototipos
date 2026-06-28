@@ -6,23 +6,23 @@
 <title>Motocoche · Búsqueda · Resultados (por vehículo)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* ============ Tokens (ADR-diseño-001 · Sistema visual marketplace) ============ */
+/* ============ Tokens · alineados con la home v3 (Anton/Archivo/Space Mono · naranja #F2660A) ============ */
 :root{
-  --primary:#FF7F00; --primary-strong:#B5460E; --primary-press:#E06E00;
+  --primary:#F2660A; --primary-strong:#B5460E; --primary-press:#D2550A;
   --primary-soft:#FFF4E8; --primary-border:#FFD9AD;
   --on-primary:#191919; --on-dark:#FFFFFF;
   --charcoal:#191919; --charcoal-2:#262626;
-  --warranty-bg:#FF7F00; --warranty-fg:#191919;
+  --warranty-bg:#F2660A; --warranty-fg:#191919;
   --success:#15803D; --success-bg:#E7F6EC; --success-fg:#136234;
   --ink:#1F1F1F; --ink-2:#4A4A4A; --muted:#6B6B6B;
   --bg:#F4F4F4; --card:#FFFFFF; --border:#E6E6E6; --surface-2:#F3F3F3;
   --r-sm:8px; --r-md:12px; --r-lg:16px; --r-pill:999px;
   --shadow-card:0 6px 18px rgba(0,0,0,.10); --shadow-hover:0 10px 24px rgba(0,0,0,.14);
-  --font:"Roboto",system-ui,Arial,sans-serif;
-  --font-cond:"Roboto Condensed","Roboto",system-ui,sans-serif;
-  --font-mono:"Roboto Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --font:"Archivo",system-ui,Arial,sans-serif;
+  --font-cond:"Anton","Archivo",system-ui,sans-serif;
+  --font-mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -55,7 +55,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 /* ============ Header ============ */
 .site-header{background:var(--charcoal);color:#fff}
 .site-header .wrap{max-width:1280px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:22px}
-.wordmark{font-family:var(--font-cond);font-weight:700;font-size:30px;letter-spacing:.02em;color:#fff;line-height:1;position:relative;white-space:nowrap}
+.wordmark{font-family:var(--font);font-weight:700;font-size:30px;letter-spacing:.03em;color:#fff;line-height:1;position:relative;white-space:nowrap}
 .wordmark::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:4px;background:linear-gradient(90deg,#9AA0A6 0 55%,var(--primary) 55% 100%);border-radius:2px}
 .searchbar{flex:1;display:flex;background:#fff;border-radius:var(--r-pill);overflow:hidden;min-width:0;box-shadow:0 0 0 1px #000 inset}
 .searchbar .seg{display:flex;align-items:center;gap:6px;padding:0 14px;color:var(--ink-2);font-size:13.5px;font-weight:500;border-right:1px solid var(--border);white-space:nowrap}
