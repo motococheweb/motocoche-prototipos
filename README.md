@@ -20,4 +20,4 @@ carbón + naranja `#FF7F00` + Roboto + sello de garantía, WCAG 2.1 AA).
 | `index.html` | Portada con acceso a ambos prototipos. |
 
 > Datos **mock** (vehículos y referencias de ejemplo); no conectan con catálogo real.
-> La fuente viva del diseño es el archivo de Figma *Motocoche · Marketplace UI*.
+> **Estos prototipos son la fuente viva del diseño** (sistema visual ADR-diseño-001). El archivo de Figma *Motocoche · Marketplace UI* queda como histórico.
