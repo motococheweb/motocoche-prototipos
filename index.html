@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motocoche · Prototipos de validación</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#FF7F00; --primary-strong:#B5460E; --primary-press:#E06E00;
+  --primary-soft:#FFF4E8; --primary-border:#FFD9AD;
+  --on-primary:#191919; --charcoal:#191919; --charcoal-2:#262626;
+  --ink:#1F1F1F; --ink-2:#4A4A4A; --muted:#6B6B6B;
+  --bg:#F4F4F4; --card:#FFFFFF; --border:#E6E6E6;
+  --font:"Roboto",system-ui,Arial,sans-serif;
+  --font-cond:"Roboto Condensed","Roboto",system-ui,sans-serif;
+  --shadow:0 6px 18px rgba(0,0,0,.10); --shadow-h:0 12px 28px rgba(0,0,0,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+.cond{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--primary-strong);outline-offset:3px;border-radius:4px}
+
+header{background:var(--charcoal);color:#fff;padding:54px 24px 64px;position:relative;overflow:hidden}
+header::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 360px at 85% -10%,rgba(255,127,0,.18),transparent 60%)}
+.wrap{max-width:1000px;margin:0 auto;position:relative}
+.wordmark{font-family:var(--font-cond);font-weight:700;font-size:30px;letter-spacing:.02em;position:relative;display:inline-block}
+.wordmark::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:4px;background:linear-gradient(90deg,#9AA0A6 0 55%,var(--primary) 55% 100%);border-radius:2px}
+.eyebrow{color:var(--primary);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-top:40px}
+h1{font-family:var(--font-cond);text-transform:uppercase;font-size:clamp(34px,6vw,56px);line-height:1.02;margin-top:10px;max-width:18ch}
+h1 em{color:var(--primary);font-style:normal}
+.sub{color:#c9c9c9;font-size:16px;margin-top:16px;max-width:62ch}
+
+main{max-width:1000px;margin:-34px auto 0;padding:0 24px 70px;position:relative}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:720px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-h)}
+.card .top{height:8px}
+.card.primary .top{background:var(--primary)}
+.card.alt .top{background:linear-gradient(90deg,#9AA0A6,var(--primary))}
+.card .pad{padding:26px 26px 28px;display:flex;flex-direction:column;gap:13px;flex:1}
+.tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.tag.t1{background:var(--primary-soft);color:var(--primary-strong);border:1px solid var(--primary-border)}
+.tag.t2{background:#F1F1F1;color:var(--ink-2);border:1px solid var(--border)}
+.card h2{font-family:var(--font-cond);text-transform:uppercase;font-size:23px;line-height:1.08}
+.card p{color:var(--ink-2);font-size:14.5px}
+.card ul{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin-top:2px}
+.card ul li{font-size:12px;color:var(--ink-2);background:#F3F3F3;border:1px solid var(--border);padding:4px 10px;border-radius:999px}
+.go{margin-top:auto;align-self:flex-start;background:var(--primary);color:var(--on-primary);font-weight:700;font-size:14.5px;padding:12px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:9px;transition:.15s}
+.go:hover{background:var(--primary-press)}
+.card.alt .go{background:var(--charcoal)}.card.alt .go:hover{background:var(--charcoal-2);color:#fff}
+
+.note{margin-top:30px;background:#FFF7ED;border:1px solid var(--primary-border);border-left:4px solid var(--primary-strong);border-radius:12px;padding:16px 20px;color:var(--ink-2);font-size:13.5px}
+.note b{color:var(--ink)}
+footer{max-width:1000px;margin:0 auto;padding:26px 24px 50px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--border)}
+footer b{color:var(--ink)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="wordmark">MOTOCOCHE</div>
+    <div class="eyebrow">Prototipos · Validación de producto</div>
+    <h1>Pantallas para <em>validar</em> antes de desarrollar</h1>
+    <p class="sub">Maquetas interactivas del marketplace de recambios, fieles al sistema visual (ADR-diseño-001). Sirven para validar diseño y flujo con el equipo. Datos de ejemplo (mock); no conectan con catálogo real.</p>
+  </div>
+</header>
+
+<main>
+  <div class="cards">
+    <a class="card primary" href="busqueda-resultados.html">
+      <div class="top"></div>
+      <div class="pad">
+        <span class="tag t1">★ Sprint 1 · a validar</span>
+        <h2>Búsqueda · Resultados</h2>
+        <p>Buscar piezas por vehículo y ver <b>solo compatibles</b>. Cubre US-BUS01 (MC-9) y el vehículo activo de US-VEH01 (MC-10).</p>
+        <ul><li>Vehículo activo</li><li>Filtros</li><li>OE/IAM</li><li>Vacío</li><li>Cargando</li><li>Ref. no compatible</li></ul>
+        <span class="go">Abrir prototipo →</span>
+      </div>
+    </a>
+
+    <a class="card alt" href="home.html">
+      <div class="top"></div>
+      <div class="pad">
+        <span class="tag t2">Dirección visual</span>
+        <h2>Propuesta de Home</h2>
+        <p>Portada del marketplace con el selector de vehículo como punto de entrada. Contexto de marca; complementa al prototipo del Sprint 1.</p>
+        <ul><li>Cabecera + selector</li><li>Categorías</li><li>Piezas destacadas</li><li>Campa</li><li>Confianza</li></ul>
+        <span class="go">Abrir propuesta →</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="note">
+    <b>Para validar el Sprint 1</b>, la pantalla de referencia es <b>Búsqueda · Resultados</b> (MC-9/MC-10). La <b>Home</b> es propuesta de dirección visual y punto de entrada. La fuente viva del diseño es el archivo de Figma <i>Motocoche · Marketplace UI</i>.
+  </div>
+</main>
+
+<footer>
+  © 2026 <b>MOTOCOCHE, S.L.</b> · Prototipos de validación (datos de ejemplo) · Sistema visual: ADR-diseño-001
+</footer>
+</body>
+</html>
